@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'events#index'
+  get 'upcoming', to: 'events#index', as: 'upcoming'
 
   resources :events do
     resources :tickets
